@@ -1,0 +1,83 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="game">
+  <meta property="og:url" content=">">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body onload="resize();">
+
+  <div id="wrapper">
+    Your content here.
+  </div>
+
+  <div id="fb-root"></div>
+  <script src="//connect.facebook.net/en_US/all.js"></script>
+  <script>
+  var appId = 'YOUR APP ID',
+      appURL = 'YOUR APP URL';
+
+  FB.init({
+    appId : appId, // App ID
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml : true  // parse XFBML
+  });
+
+  // redirect to app/tab URL if user views outside Facebook
+  // useful for enabling open graph data
+  var isInIframe = (window.location != window.parent.location) ? true : false;
+  if ( !isInIframe ) {
+    // location.href = appURL;
+  }
+
+  // setup tab autogrowth
+  function resize() {
+    FB.Canvas.setAutoGrow();
+  }
+  </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+</body>
+</html>
