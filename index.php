@@ -1,3 +1,18 @@
+<?php
+require 'inc/fbsr.php';
+
+$app_secret = 'YOUR_APP_SECRET';
+$app_id = 'YOUR_APP_ID';
+
+$sr = parse_signed_request($_REQUEST['signed_request'], $app_secret);
+echo '<!--';
+var_dump($sr);
+echo '-->';
+$page_data = (array) json_decode(file_get_contents('http://graph.facebook.com/'.$sr['page']['id']));
+$page_name = $page_data['name'];
+$tab_url = $page_data['link'].'?sk=app_'.$app_id;
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -31,8 +46,8 @@
   <div id="fb-root"></div>
   <script src="https://connect.facebook.net/en_US/all.js"></script>
   <script>
-  var appId = 'YOUR APP ID',
-      appURL = 'YOUR APP URL';
+  var appId = '<?php echo $app_id; ?>',
+      appURL = '<?php echo $tab_url; ?>';
 
   FB.init({
     appId : appId, // App ID
