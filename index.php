@@ -59,7 +59,7 @@ $tab_url = $page_data['link'].'?sk=app_'.$app_id;
   // redirect to app/tab URL if user views outside Facebook
   // useful for enabling open graph data
   var isInIframe = (window.location != window.parent.location) ? true : false;
-  if ( !isInIframe ) {
+  if ( !isInIframe && location.host.indexOf('localhost') == -1 ) {
     // location.href = appURL;
   }
 
