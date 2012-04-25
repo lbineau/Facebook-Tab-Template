@@ -1,7 +1,7 @@
 Facebook Tab Template
 ===
 
-An awesome boilerplate template for creating basic Facebook Tabs. Based on HTML5 Boilerplate (v3.0):
+An awesome boilerplate template for creating basic Facebook Tabs. Based on HTML5 Boilerplate (v3.0.2):
 http://html5boilerplate.com
 
 Pull requests are encouraged.
@@ -22,7 +22,7 @@ Included
 ---
 
 ### Javascript
-- jQuery 1.7.1
+- jQuery 1.7.2
 - Facebook Javascript SDK
 - Google Analytics
 
