@@ -25,9 +25,13 @@ Included
 - jQuery 1.7.2
 - Facebook Javascript SDK
 - Google Analytics
+- multiple redirections with OAUTH permissions parameter
 
 ### CSS
 - HTML5 Boilerplate reset, based on normalize.css
+
+### PHP
+- Facebook PHP SDK
 
 ### HTML
 - Open Graph meta tags
